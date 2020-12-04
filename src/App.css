@@ -1,105 +1,61 @@
 /* main settings */
-*,
-*::before,
-*::after {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Castoro;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 15px;
-    padding: 0;
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Castoro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-ul,
-ol,
-li {
-    list-style: none;
+ul, ol, li {
+  list-style: none;
 }
+
 /*  */
 
-/* header */
 
-/* search and options */
-
-.options{
-    display: block;
-    margin: 5px;
-    border-radius: 50px;
-    color: rgb(105, 105, 105);
-    background: rgb(105, 105, 105);
-    width: 35px;
-    height: 35px;
-    float: left;
-  }
-  
-  .search{
-    display: inline-block;
-    margin: 12px 10px;
-    border-radius: 3px;
-    float: left;
-  }
-  /*  */
-  
-  /* chat options */
-  
-  nav {
-    position: sticky;
-    border: 1px solid black;
-    padding: 15px;
-    margin-left: 18%;
-    top: 0;
-    left: 0;
-  }
-
-  .menu .userName{
-    margin-right: 350px;
-  }
-  
-  .menu li {
-    display: inline-block;
-  }
-  
-  .menu a {
-    margin-left: 100px;
-    font-weight: bold;
-    color: #697CA6;
-  }
 /*  */
 
 /* body */
 
 /* choose chat */
-  
-  .chats a {
-    display: block;
-    font-weight: bold;
-    color: #0051ff;
-    border: 1px solid black;
-    padding: 20px;
-    width: 18%;
-  }
-  /*  */
-  
-  /* main chat */
-  .chat{
-    position: sticky;
-    top: 95%;
-  }
-  .mainChat{
-    margin-left: 300px;
-    width: 78%;
-    height: 40px;
-    float: left;
-  }
-  .send{
-    display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 0 0 0 10px;
-  }
+
+.chats a {
+  display: block;
+  font-weight: bold;
+  color: #0051ff;
+  border: 1px solid black;
+  padding: 20px;
+  width: 18%;
+}
+
+/*  */
+
+/* main chat */
+
+.chat {
+  position: sticky;
+  top: 95%;
+}
+
+.mainChat {
+  margin-left: 300px;
+  width: 78%;
+  height: 40px;
+  float: left;
+}
+
+.send {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0 0 0 10px;
+}
