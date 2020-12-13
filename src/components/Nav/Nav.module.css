@@ -1,0 +1,16 @@
+ .nav{
+    grid-area: n;
+    position: sticky;
+    top: 10px;
+    min-height: 110vh;
+    z-index: 1;
+ }
+
+  .chats a {
+    display: inline-block;
+    padding: 20px 201px 20px 20px;  
+    font-weight: bold;
+    color: #0051ff;
+    border: 1px solid rgb(146, 137, 137);
+  }
+ 

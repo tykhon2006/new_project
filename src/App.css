@@ -19,43 +19,20 @@ ul, ol, li {
   list-style: none;
 }
 
-/*  */
-
-
-/*  */
-
-/* body */
-
-/* choose chat */
-
-.chats a {
-  display: block;
-  font-weight: bold;
-  color: #0051ff;
-  border: 1px solid black;
-  padding: 20px;
-  width: 18%;
+.bg_app{
+  background-color: rgb(162, 194, 252);
+  border-radius: 5px;
+  box-shadow: 8px 8px 7px -1px gray;
 }
 
-/*  */
-
-/* main chat */
-
-.chat {
-  position: sticky;
-  top: 95%;
+.App{
+  display: grid;
+  grid-template-areas: "h h" "n m";
+  grid-template-columns: 2fr 10fr;
+  grid-template-rows: 60px 1fr;
+  width: 80vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  grid-gap: 10px;
 }
 
-.mainChat {
-  margin-left: 300px;
-  width: 78%;
-  height: 40px;
-  float: left;
-}
-
-.send {
-  display: inline-block;
-  border: 1px solid black;
-  padding: 10px;
-  margin: 0 0 0 10px;
-}
