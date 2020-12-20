@@ -1,0 +1,26 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.mainProfile {
+    color: rgb(110, 0, 0);
+}
+
+.mainProfile {
+    padding: 10px;
+}
+
+.photo img {
+    float: right;
+    border-radius: 100%;
+    border: 2px solid rgb(0, 17, 255);
+    width: 100px;
+    height: 100px;
+}
+
+.mainProfile div {
+    margin: 20px 0 45px 0;
+    font-size: 25px;
+}

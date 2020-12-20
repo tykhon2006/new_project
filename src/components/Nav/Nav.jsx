@@ -7,6 +7,7 @@ const Nav = () => {
             <ul className={classes.chats}>
                 <li><NavLink to="/profile" >Profile</NavLink></li>
                 <li><NavLink to="/dialogs" >Dialogs</NavLink></li>
+                <li><NavLink to="/news" >News</NavLink></li>
                 <li><a href="#" >User</a></li>
                 <li><a href="#" >User</a></li>
                 <li><a href="#" >User</a></li>

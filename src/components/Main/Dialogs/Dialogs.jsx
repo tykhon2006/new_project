@@ -1,11 +1,11 @@
 import Dialog from "./Dialog/Dialog";
 import classes from "./Dialogs.module.css";
 
-
-const Dialogs = () => {
+const Dialogs = (props) => {
+    
     return (
         <div className={classes.dialogs}>
-            <Dialog />
+            <Dialog dialogData = {props.dialogData}/>
         </div>
     );
 }
