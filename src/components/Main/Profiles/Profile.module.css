@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: left;
 }
-
+.photo{
+    display: flex;
+}
 .mainProfile {
     color: rgb(110, 0, 0);
 }
@@ -13,7 +15,6 @@
 }
 
 .photo img {
-    float: right;
     border-radius: 100%;
     border: 2px solid rgb(0, 17, 255);
     width: 100px;
