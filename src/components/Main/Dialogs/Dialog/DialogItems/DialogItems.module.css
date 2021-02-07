@@ -1,0 +1,10 @@
+.chats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 6px 6px 5px -1px gray;
+    background: rgb(143, 154, 255);
+}

@@ -8,9 +8,9 @@ const Main = (props) => {
 
     return (
         <main className={`${classes.main} bg_app`}>
-            <Route path="/profile" render={() => <Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText = {props.updateNewPostText} />}  />
+            <Route exact path={["/","/profile"]} render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}  />
             <Route path="/news" render={() => <News />} />
-            <Route path="/dialogs" render={() => <Dialogs dialogsPage={props.state.dialogsPage} />} />
+            <Route path="/dialogs" render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />} />
         </main>
     );
 }

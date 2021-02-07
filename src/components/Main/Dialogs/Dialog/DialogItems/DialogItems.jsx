@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
 import avatar from "../../../../../img/avatar.png";
-
+import classes from "./DialogItems.module.css";
 const DialogItems = props => {
     let newDialog = React.createRef();
     let addDialog = () => {
@@ -10,13 +10,12 @@ const DialogItems = props => {
     }
     return (
         <form>
-            <NavLink to={`/dialogs/${props.id}`}>
+            <NavLink className={classes.chats} to={`/dialogs/${props.id}`}>
                 <img src={avatar} ></img>
                 <div>
                     {props.name}
                 </div>
-                <input ref={newDialog} type="text" placeholder="Написать сообщение..." className="mainChat" />
-                <button onClick={addDialog}>Submit</button>
+               
             </NavLink>
         </form>
     );

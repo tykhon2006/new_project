@@ -1,17 +1,13 @@
 .profile {
     display: flex;
-    align-items: center;
-    justify-content: left;
 }
 .photo{
     display: flex;
+    order: -1;
 }
 .mainProfile {
     color: rgb(110, 0, 0);
-}
-
-.mainProfile {
-    padding: 10px;
+    text-align: left;
 }
 
 .photo img {

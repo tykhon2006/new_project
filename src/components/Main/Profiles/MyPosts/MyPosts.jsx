@@ -2,26 +2,30 @@ import avatar from "../../../../img/avatar.png";
 import Post from "./Post/Post";
 import classes from "./MyPosts.module.css";
 import React from "react";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/state";
 
 const MyPosts = (props) => {
     let newPost = React.createRef();
     const addMessage = () => {
-        props.addPost();
+        let action = addPostActionCreator();
+        props.dispatch(action);
     }
-    const newPostChange = ()=> {
+    const newPostChange = () => {
         let text = newPost.current.value;
-        props.updateNewPostText(text);
+        let action = updateNewPostTextActionCreator(text);
+        props.dispatch(action);
     }
+  
     let postElements = props.postData.map(recording => <Post post={recording.post} id={recording.id} />);
 
     return (
         <div className={classes.makePost}>
-            <div className={classes.submitPost}>
+            <div className={`boxPost ${classes.post}`}>
                 <img src={avatar} />
-                <textarea cols="50" rows="1" name="post" ref = {newPost} onChange = {newPostChange} value = {props.newPostText} />
+                <textarea cols="30" rows="1" name="post" className={classes.makePost__textarea} ref={newPost} onChange={newPostChange} value={props.newPostText} />
                 <div className={classes.submit} onClick={addMessage} >Submit</div>
             </div>
-            <div className={classes.posts}>
+            <div>
                 {postElements}
             </div>
         </div>

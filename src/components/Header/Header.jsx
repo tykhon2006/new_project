@@ -19,12 +19,12 @@ const Header = () => {
                 <img src={option} />
             </div>
 
-            <div className={classes.profile}>
-                <div className={classes.header__profile}>
-                    <b>Username</b>
-                    <img src={avatar} />
-                </div>
+
+            <div className={classes.header__profile}>
+                <b>Username</b>
+                <img src={avatar} />
             </div>
+
 
         </header>
     );

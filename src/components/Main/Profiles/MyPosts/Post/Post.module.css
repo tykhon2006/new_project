@@ -1,7 +1,5 @@
-.postArea{
-    display: flex;
+.post{
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 10px;
+    
 } 
 

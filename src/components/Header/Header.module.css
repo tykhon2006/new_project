@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 2;
+  padding: 0 10px;
 }
 
 .header__search img {
@@ -31,6 +32,7 @@
 }
 
 .call {
+  display: flex;
   margin-left: 700px;
 }
 
@@ -38,16 +40,23 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  margin-left: 25px;
+  margin-right: 5px;
 }
 
-.profile {
-  width: 100px;
-  margin-right: 15px;
+.header__profile {
+  background:rgb(251, 248, 198);
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header__profile:hover{
+  background:rgb(251, 241, 93);
 }
 
-.profile img {
+.header__profile img {
   width: 30px;
   height: 30px;
   border-radius: 100%;
+  margin-right: 0;
 }

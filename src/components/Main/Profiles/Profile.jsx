@@ -16,7 +16,7 @@ const Profile = (props) => {
                     <img src={avatar} />
                 </div>
             </div>
-            <MyPosts postData={props.profilePage.postData} addPost={props.addPost} updateNewPostText = {props.updateNewPostText} newPostText = {props.profilePage.newPostText} />
+            <MyPosts postData={props.profilePage.postData} dispatch={props.dispatch} />
         </div>
     );
 }

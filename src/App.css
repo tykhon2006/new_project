@@ -25,6 +25,17 @@ ul, ol, li {
   box-shadow: 8px 8px 7px -1px gray;
 }
 
+.boxPost{
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 60px;
+  background-color: rgb(132, 182, 223);  
+  padding: 0 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .App{
   display: grid;
   grid-template-areas: "h h" "n m";
