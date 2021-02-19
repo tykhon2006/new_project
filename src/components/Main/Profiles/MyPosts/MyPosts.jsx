@@ -2,16 +2,15 @@ import avatar from "../../../../img/avatar.png";
 import Post from "./Post/Post";
 import classes from "./MyPosts.module.css";
 import React from "react";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/state";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/profileReducer";
 
 const MyPosts = (props) => {
-    let newPost = React.createRef();
     const addMessage = () => {
         let action = addPostActionCreator();
         props.dispatch(action);
     }
-    const newPostChange = () => {
-        let text = newPost.current.value;
+    const newPostChange = (e) => {
+        let text = e.target.value;
         let action = updateNewPostTextActionCreator(text);
         props.dispatch(action);
     }
@@ -22,7 +21,7 @@ const MyPosts = (props) => {
         <div className={classes.makePost}>
             <div className={`boxPost ${classes.post}`}>
                 <img src={avatar} />
-                <textarea cols="30" rows="1" name="post" className={classes.makePost__textarea} ref={newPost} onChange={newPostChange} value={props.newPostText} />
+                <textarea cols="30" rows="1" name="post" className={classes.makePost__textarea}  onChange={newPostChange} value={props.newPostText} />
                 <div className={classes.submit} onClick={addMessage} >Submit</div>
             </div>
             <div>
