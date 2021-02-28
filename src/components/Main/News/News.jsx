@@ -4,6 +4,7 @@ const News = () => {
     return (
         <div className={classes.news}>
             <div> hello </div>
+           
         </div>
     );
 }

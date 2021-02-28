@@ -2,26 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import storeContext from './storeContext';
 import reportWebVitals from './reportWebVitals';
 import store from "./redux/reduxStore";
 import { BrowserRouter } from 'react-router-dom';
 
-const renderEntireThree = (state) => {
+const renderEntireThree = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} dispatch = {store.dispatch.bind(store)} />
+      <storeContext.Provider value = {store} >
+        <App />
+      </storeContext.Provider>
     </BrowserRouter>,
     document.getElementById('root')
   );
 }
 
-renderEntireThree(store.getState());
-store.subscribe(()=>{
-  let state = store.getState();
-  renderEntireThree(state);
-})
+renderEntireThree();
+store.subscribe(renderEntireThree);
 reportWebVitals();
 
-/* npm install react-router-dom --save 
+/* npm install react-router-dom --save
    npm install redux --save
 */

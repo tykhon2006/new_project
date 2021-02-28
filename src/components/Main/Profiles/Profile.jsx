@@ -1,5 +1,6 @@
 import avatar from "../../../img/avatar.png";
-import MyPosts from "./MyPosts/MyPosts";
+
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import classes from "./Profile.module.css";
 
 const Profile = (props) => {
@@ -16,7 +17,7 @@ const Profile = (props) => {
                     <img src={avatar} />
                 </div>
             </div>
-            <MyPosts postData={props.profilePage.postData} dispatch={props.dispatch} newPostText = {props.profilePage.newPostText} />
+            <MyPostsContainer />
         </div>
     );
 }

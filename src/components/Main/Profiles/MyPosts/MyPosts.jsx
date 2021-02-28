@@ -2,17 +2,17 @@ import avatar from "../../../../img/avatar.png";
 import Post from "./Post/Post";
 import classes from "./MyPosts.module.css";
 import React from "react";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/profileReducer";
 
 const MyPosts = (props) => {
-    const addMessage = () => {
-        let action = addPostActionCreator();
-        props.dispatch(action);
+    const addMessage = () => {    
+        if(props.newPostText !== ""){
+            props.addPost();
+        }
     }
     const newPostChange = (e) => {
         let text = e.target.value;
-        let action = updateNewPostTextActionCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
+        
     }
   
     let postElements = props.postData.map(recording => <Post post={recording.post} id={recording.id} />);
