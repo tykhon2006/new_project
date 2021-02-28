@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import storeContext from './storeContext';
 import reportWebVitals from './reportWebVitals';
 import store from "./redux/reduxStore";
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 const renderEntireThree = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <storeContext.Provider value = {store} >
+      <Provider value = {store} >
         <App />
-      </storeContext.Provider>
+      </Provider>
     </BrowserRouter>,
     document.getElementById('root')
   );
@@ -24,4 +24,5 @@ reportWebVitals();
 
 /* npm install react-router-dom --save
    npm install redux --save
+   npm install react-redux --save
 */
